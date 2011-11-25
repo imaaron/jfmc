@@ -46,37 +46,152 @@ var playerStats = [],
 // (Each number in the arrays corresponds to an index in the playerStats array)
 playerRoles = {
   gk: {
-    gk: [0,1,6,8,9,17,18,20,25,29],
-    sk: [0,1,2,3,6,9,10,17,18,19,20,25,28,29,33]
+    "Goalkeeper":
+      [0,1,6,8,9,17,18,20,25,29],
+    "Sweeper Keeper":
+      [0,1,2,3,6,9,10,17,18,19,20,25,28,29,33]
   },
   sw: {
-    sw: [6,9,10,12,15,17,18,20,25,28,30,31],
-    ls: [2,6,9,10,12,15,17,18,19,20,25,26,28,30,31],
-    la: [2,6,7,9,10,12,15,17,18,19,20,25,26,28,30,31]
+    "Sweeper":
+      [6,9,10,12,15,17,18,20,25,28,30,31],
+    "Librero (support)":
+      [2,6,9,10,12,15,17,18,19,20,25,26,28,30,31],
+    "Librero (attack)":
+      [2,6,7,9,10,12,15,17,18,19,20,25,26,28,30,31]
   },
   dc: {
-    cdd: [6,9,12,17,18,20,21,25,31,35],
-    cds: [6,9,12,14,16,17,18,20,21,25,31,35],
-    cdc: [6,9,12,15,17,18,20,21,25,28,31,35],
-    bpdd: [6,9,10,12,13,17,18,19,20,21,25,31,35],
-    bpds: [6,9,10,12,13,15,16,17,18,19,20,21,25,31,35],
-    bpdc: [6,9,10,12,13,15,17,18,19,20,21,25,28,31,35],
-    ldd:  [9,12,21,25,31,35],
-    lds:  [9,12,14,16,21,25,31,35],
-    ldc:  [9,12,15,21,25,28,31,35]
+    "Central Defender (defend)":
+      [6,9,12,17,18,20,21,25,31,35],
+    "Central Defender (stopper)":
+      [6,9,12,14,16,17,18,20,21,25,31,35],
+    "Central Defender (cover)":
+      [6,9,12,15,17,18,20,21,25,28,31,35],
+    "Ball-Playing Defender (defend)":
+      [6,9,10,12,13,17,18,19,20,21,25,31,35],
+    "Ball-Player Defender (stopper)":
+      [6,9,10,12,13,15,16,17,8,19,20,21,25,31,35],
+    "Ball-Playing Defender (cover)":
+      [6,9,10,12,13,15,17,18,19,20,21,25,28,31,35],
+    "Limited Defender (defend)":
+      [9,12,21,25,31,35],
+    "Limited Defender (stopper)":
+      [9,12,14,16,21,25,31,35],
+    "Limited Defender (cover)":
+      [9,12,15,21,25,28,31,35]
   },
   dlr: {
-    fbd:  [9,12,15,18,25,26,27,28,34],
-    fbs:  [1,9,12,15,18,25,26,27,28,34],
-    fba:  [1,2,9,12,15,18,24,25,26,27,28,34],
-    wbd:  [9,12,20,25,26,27,28,34],
-    wbs:  [1,9,12,20,25,26,27,28,34],
-    wba:  [1,2,9,12,20,24,25,26,27,28,34]
+    "Fullback (defend)":
+      [9,12,15,18,25,26,27,28,34],
+    "Fullback (support)":
+      [1,9,12,15,18,25,26,27,28,34],
+    "Fullback (attack)":
+      [1,2,9,12,15,18,24,25,26,27,28,34],
+    "Wingback (defend)":
+      [9,12,20,25,26,27,28,34],
+    "Wingback (support)":
+      [1,9,12,20,25,26,27,28,34],
+    "Wingback (attack)":
+      [1,2,9,12,20,24,25,26,27,28,34]
   },
   wblr: {
-    wbd:  [9,12,20,25,26,27,28,34],
-    wbs:  [1,9,12,20,25,26,27,28,34],
-    wba:  [1,2,9,12,20,24,25,26,27,28,34]
+    "Wingback (defend)":
+      [9,12,20,25,26,27,28,34],
+    "Wingback (support)":
+      [1,9,12,20,25,26,27,28,34],
+    "Wingback (attack)":
+      [1,2,9,12,20,24,25,26,27,28,34]
+  },
+  dmc: {
+    "Defensive Midfielder (defend)":
+      [9,12,18,20,25,26,27,28,34,35],
+    "Defensive Midfielder (support)":
+      [9,10,12,20,25,26,27,28,34,35],
+    "Deep-Lying Playmaker (defend)":
+      [9,10,12,13,17,19,20,25,26,35],
+    "Deep-Lying Playmaker (support)":
+      [4,10,12,13,17,19,20,24,25,26],
+    "Anchor Man":
+      [6,9,12,15,18,20,21,25,27,35]
+  },
+  mc: {
+    "Deep-Lying Playmaker (defend)":
+      [9,10,12,13,17,19,20,25,26,35],
+    "Deep-Lying Playmaker (support)":
+      [4,10,12,13,17,19,20,24,25,26],
+    "Central Midfielder (defend)":
+      [4,6,9,10,12,20,21,25,26,27],
+    "Central Midfielder (support)":
+      [4,7,9,10,12,19,20,21,24,25,26,27],
+    "Central Midfielder (attack)":
+      [2,3,4,7,10,19,20,21,24,26,27],
+    "Ball-Winning Midfielder (defend)":
+      [9,12,14,16,21,25,26,27,34,35],
+    "Ball-Winning Midfielder (support)":
+      [9,10,12,14,16,21,26,27,34,35],
+    "Box-to-Box Midfielder":
+      [2,3,4,6,7,9,10,13,15,16,20,21,24,25,27,28,34,35],
+    "Advanced PLaymaker (support)":
+      [4,10,13,19,20,22,26,27,34],
+    "Advanced Playmaker (attack)":
+      [2,4,10,13,15,19,20,22,24,26]
+  },
+  mlr: {
+    "Wide Midfielder":
+      [1,10,12,15,20,21,24,26,27,34],
+    "Winger":
+      [1,2,13,20,22,24,28,29,30,33],
+    "Defensive Winger":
+      [1,2,9,12,13,20,26,27,33,34]
+  },
+  amlr: {
+    "Winger":
+      [1,2,13,20,22,24,28,29,30,33],
+    "Inside Forward (support)":
+      [2,7,10,13,20,22,24,26,28,33],
+    "Inside Forward (attack)":
+      [1,2,3,10,20,22,24,26,28,33],
+    "Advanced PLaymaker (support)":
+      [4,10,13,19,20,22,26,27,34],
+    "Advanced Playmaker (attack)":
+      [2,4,10,13,15,19,20,22,24,26]
+  },
+  amc: {
+    "Advanced PLaymaker (support)":
+      [4,10,13,19,20,22,26,27,34],
+    "Advanced Playmaker (attack)":
+      [2,4,10,13,15,19,20,22,24,26],
+    "Inside Forward (support)":
+      [2,7,10,13,20,22,24,26,28,33],
+    "Inside Forward (attack)":
+      [1,2,3,10,20,22,24,26,28,33],
+    "Attacking Midfielder (support)":
+      [4,7,10,13,19,20,22,26,27,30],
+    "Attacking Midfielder (attack)":
+      [2,4,10,13,19,20,22,24,27,28],
+    "Trequartista":
+      [3,4,9,13,15,17,19,22,24,29]
+  },
+  st: {
+    "Deep-Lying Forward (support)":
+      [2,4,7,10,13,19,20,24,26,35],
+    "Deep-Lying Forward (attack)":
+      [3,4,10,13,15,17,19,20,24,30],
+    "Advanced Forward":
+      [1,2,3,6,15,17,22,24,27,33],
+    "Target Man (support)":
+      [4,6,7,14,16,21,26,27,31,35],
+    "Target Man (attack)":
+      [3,4,6,15,16,21,26,27,31,35],
+    "Poacher":
+      [2,3,4,15,17,24,28,29,30,33],
+    "Complete Forward":
+      [2,3,4,6,7,10,13,15,17,19,20,21,24,26,28,29,30,31,33,35],
+    "Defensive Forward (support)":
+      [4,7,9,10,12,26,27,33,34,35],
+    "Defensive Forward (attack)":
+      [3,9,12,15,17,24,26,27,34,35],
+    "Trequartista":
+      [3,4,9,13,15,17,19,22,24,29]
   }
 },
   
@@ -84,7 +199,30 @@ calculateButton = document.getElementById('calculate');
 
 // Run calculateAbility when calculateButton is clicked
 calculateButton.addEventListener('click', function() {
-  calculateAbility();
+  var ability = calculateAbility();
+
+// Show results in DOM
+  var results = document.getElementById('results');
+  // Remove current elements from results div
+  while (results.firstChild) {
+    results.removeChild(results.firstChild);
+  }
+
+  // Create a List for the roles and corresponding ability
+  resultsList = document.createElement('ul');
+  for (role in ability) {
+    resultsItem = document.createElement('li');
+    resultsRole = document.createElement('span');
+    resultsItemText = document.createTextNode( ability[role] );
+    resultsRoleText = document.createTextNode( role + ": " );
+    
+    resultsRole.appendChild( resultsRoleText );
+    resultsItem.appendChild( resultsRole );
+    resultsItem.appendChild( resultsItemText );
+    resultsList.appendChild( resultsItem )
+  }
+  results.appendChild(resultsList);
+
 }, false);
 
 // Function to check value of position radio buttons
@@ -140,5 +278,5 @@ function calculateAbility() {
     // Round to nearest whole number
     abilityPosition[role] = parseInt(abilityPosition[role], 10);
   }
-  console.log( abilityPosition );
+  return abilityPosition;
 };
