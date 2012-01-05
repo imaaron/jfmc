@@ -33,7 +33,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 14px; line-height: 1.429; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
@@ -64,7 +64,7 @@ a:hover, a:active { outline: 0; }
    Typography
    ========================================================================== */
 
-abbr[title] { border-bottom: 1px dotted; }
+abbr[title]}{ border-bottom: 1px dotted; }
 
 b, strong { font-weight: bold; }
 
@@ -209,23 +209,35 @@ td { vertical-align: top; }
 
 
 /* ==|== primary styles =====================================================
-   Author:
+   Author: Aaron Cooke
    ========================================================================== */
+#container {
+  padding: 0 0.5em;}
+legend {
+  font-size: 1.286em;
+  font-weight: bold;
+}
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+label {
+  display: block;
+  padding: 0.714em 0.5em;
+}
+ol li:nth-child(2n+1) {
+  background: #eee;
+}
+.stats label input {
+  float: right;
+  width: 3em;}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#results li {
+  text-align: right;
+}
+#results span {
+  float: left;
+}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.

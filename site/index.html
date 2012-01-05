@@ -39,7 +39,7 @@
     </header>
     <div id="main" role="main">
       <form>
-        <fieldset class="technical">
+        <fieldset class="stats">
           <legend>Technical</legend>
           <ol>
             <li><label for="stat_corners">Corners <input id="stat_corners" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
@@ -58,7 +58,7 @@
             <li><label for="stat_technique">Technique <input id="stat_technique" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
           </ol>
         </fieldset>
-        <fieldset class="mental">
+        <fieldset class="stats">
           <legend>Mental</legend>
           <ol>
             <li><label for="stat_aggression">Aggression <input id="stat_aggression" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
@@ -77,7 +77,7 @@
             <li><label for="stat_workRate">Work Rate <input id="stat_workRate" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
           </ol>
         </fieldset>
-        <fieldset class="physical">
+        <fieldset class="stats">
           <legend>Physical</legend>
           <ol>
             <li><label for="stat_acceleration">Acceleration <input id="stat_acceleration" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
@@ -98,7 +98,7 @@
             <li><label for="pos_dc"><input type="radio" name="position" id="pos_dc" value="dc" /> DC</label></li>
             <li><label for="pos_dlr"><input type="radio" name="position" id="pos_dlr" value="dlr" /> DL R</label></li>
             <li><label for="pos_wblr"><input type="radio" name="position" id="pos_wblr" value="wblr" /> WBL R</label></li>
-            <li><label for="pos_dmc"><input type="radio" name="position" id="pos_dmc" value="dmc" /> DMC</label></li>
+            <li><label for="pos_dm"><input type="radio" name="position" id="pos_dm" value="dm" /> DM</label></li>
             <li><label for="pos_mc"><input type="radio" name="position" id="pos_mc" value="mc" /> MC</label></li>
             <li><label for="pos_mlr"><input type="radio" name="position" id="pos_mlr" value="mlr" /> ML R</label></li>
             <li><label for="pos_amc"><input type="radio" name="position" id="pos_amc" value="amc" /> AMC</label></li>
@@ -115,14 +115,14 @@
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
+  </div> <!-- end of #container -->
 
 
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.3.min.js"><\/script>')</script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.3.min.js"><\/script>')</script> -->
 
 
   <!-- scripts concatenated and minified via build script -->
@@ -132,13 +132,13 @@
 
 
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-       mathiasbynens.be/notes/async-analytics-snippet -->
+       mathiasbynens.be/notes/async-analytics-snippet
   <script>
     var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+  </script> -->
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
