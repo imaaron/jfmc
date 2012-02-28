@@ -39,6 +39,22 @@
     </header>
     <div id="main" role="main">
       <form>
+	<fieldset>
+          <legend>Position</legend>
+          <ol>
+            <li><label for="pos_gk"><input type="radio" name="position" id="pos_gk" value="gk" checked /> GK</label></li>
+            <li><label for="pos_sw"><input type="radio" name="position" id="pos_sw" value="sw" /> SW</label></li>
+            <li><label for="pos_dc"><input type="radio" name="position" id="pos_dc" value="dc" /> DC</label></li>
+            <li><label for="pos_dlr"><input type="radio" name="position" id="pos_dlr" value="dlr" /> DL R</label></li>
+            <li><label for="pos_wblr"><input type="radio" name="position" id="pos_wblr" value="wblr" /> WBL R</label></li>
+            <li><label for="pos_dm"><input type="radio" name="position" id="pos_dm" value="dm" /> DM</label></li>
+            <li><label for="pos_mc"><input type="radio" name="position" id="pos_mc" value="mc" /> MC</label></li>
+            <li><label for="pos_mlr"><input type="radio" name="position" id="pos_mlr" value="mlr" /> ML R</label></li>
+            <li><label for="pos_amc"><input type="radio" name="position" id="pos_amc" value="amc" /> AMC</label></li>
+            <li><label for="pos_amlr"><input type="radio" name="position" id="pos_amlr" value="amlr" /> AML R</label></li>
+            <li><label for="pos_st"><input type="radio" name="position" id="pos_st" value="st" /> ST</label></li>
+          </ol>
+        </fieldset> 
         <fieldset class="stats">
           <legend>Technical</legend>
           <ol>
@@ -88,22 +104,6 @@
             <li><label for="stat_pace">Pace <input id="stat_pace" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
             <li><label for="stat_stamina">Stamina <input id="stat_stamina" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
             <li><label for="stat_strength">Strength <input id="stat_strength" class="stat" type="number" min="0" max="20" value="10" required /></label></li>
-          </ol>
-        </fieldset>
-        <fieldset>
-          <legend>Position</legend>
-          <ol>
-            <li><label for="pos_gk"><input type="radio" name="position" id="pos_gk" value="gk" checked /> GK</label></li>
-            <li><label for="pos_sw"><input type="radio" name="position" id="pos_sw" value="sw" /> SW</label></li>
-            <li><label for="pos_dc"><input type="radio" name="position" id="pos_dc" value="dc" /> DC</label></li>
-            <li><label for="pos_dlr"><input type="radio" name="position" id="pos_dlr" value="dlr" /> DL R</label></li>
-            <li><label for="pos_wblr"><input type="radio" name="position" id="pos_wblr" value="wblr" /> WBL R</label></li>
-            <li><label for="pos_dm"><input type="radio" name="position" id="pos_dm" value="dm" /> DM</label></li>
-            <li><label for="pos_mc"><input type="radio" name="position" id="pos_mc" value="mc" /> MC</label></li>
-            <li><label for="pos_mlr"><input type="radio" name="position" id="pos_mlr" value="mlr" /> ML R</label></li>
-            <li><label for="pos_amc"><input type="radio" name="position" id="pos_amc" value="amc" /> AMC</label></li>
-            <li><label for="pos_amlr"><input type="radio" name="position" id="pos_amlr" value="amlr" /> AML R</label></li>
-            <li><label for="pos_st"><input type="radio" name="position" id="pos_st" value="st" /> ST</label></li>
           </ol>
         </fieldset>
         <input type="button" id="calculate" value="Calculate" />
