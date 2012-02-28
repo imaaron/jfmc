@@ -213,21 +213,33 @@ td { vertical-align: top; }
    ========================================================================== */
 #container {
   padding: 0 0.5em;}
+.stats {
+  margin: 0 -0.5em;}
 legend {
   font-size: 1.286em;
   font-weight: bold;
+  text-align: center;
 }
 ol, ul {
   list-style: none;
   padding: 0;
 }
-label {
+select {
+  width: 100%;
+  }
+label, select {
   display: block;
   padding: 0.714em 0.5em;
 }
-ol li:nth-child(2n+1) {
-  background: #eee;
-}
+ol li {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#ffffff)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #f3f3f3, #ffffff); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #f3f3f3, #ffffff); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, #f3f3f3, #ffffff); /* IE10 */
+  background-image:      -o-linear-gradient(top, #f3f3f3, #ffffff); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #f3f3f3, #ffffff);
+  }
 .stats label input {
   float: right;
   width: 3em;}

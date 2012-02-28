@@ -35,25 +35,26 @@
 
   <div id="container">
     <header>
-
+      <h1>Golden Boot</h1>
+      <p>FM 2012 position role calculator<p>
     </header>
     <div id="main" role="main">
       <form>
 	<fieldset>
           <legend>Position</legend>
-          <ol>
-            <li><label for="pos_gk"><input type="radio" name="position" id="pos_gk" value="gk" checked /> GK</label></li>
-            <li><label for="pos_sw"><input type="radio" name="position" id="pos_sw" value="sw" /> SW</label></li>
-            <li><label for="pos_dc"><input type="radio" name="position" id="pos_dc" value="dc" /> DC</label></li>
-            <li><label for="pos_dlr"><input type="radio" name="position" id="pos_dlr" value="dlr" /> DL R</label></li>
-            <li><label for="pos_wblr"><input type="radio" name="position" id="pos_wblr" value="wblr" /> WBL R</label></li>
-            <li><label for="pos_dm"><input type="radio" name="position" id="pos_dm" value="dm" /> DM</label></li>
-            <li><label for="pos_mc"><input type="radio" name="position" id="pos_mc" value="mc" /> MC</label></li>
-            <li><label for="pos_mlr"><input type="radio" name="position" id="pos_mlr" value="mlr" /> ML R</label></li>
-            <li><label for="pos_amc"><input type="radio" name="position" id="pos_amc" value="amc" /> AMC</label></li>
-            <li><label for="pos_amlr"><input type="radio" name="position" id="pos_amlr" value="amlr" /> AML R</label></li>
-            <li><label for="pos_st"><input type="radio" name="position" id="pos_st" value="st" /> ST</label></li>
-          </ol>
+          <select name="position" id="position">
+            <option value="gk">GK</option>
+            <option value="sw">SW</option>
+            <option value="dc">DC</option>
+	    <option value="dlr">DLRk</option>
+	    <option value="wblr">WBLR</option>
+            <option value="dm">DM</option>
+            <option value="mc">MC</option>
+            <option value="mlr">MLR</option>
+            <option value="amc">AMC</option>
+            <option value="amlr">AMLR</option>
+	    <option value="st">ST</option>
+          </select>
         </fieldset> 
         <fieldset class="stats">
           <legend>Technical</legend>

@@ -282,15 +282,9 @@ calculateButton.addEventListener('click', function() {
 
 // Function to check value of position radio buttons
 function getPositionValue() {
-  var positionRadio = document.forms[0].elements['position'];
-   for(var i = 0; i < positionRadio.length; i++)
-   {
-      if(positionRadio[i].checked)
-      {
-         return positionRadio[i].value;
-      }
-   }
-   return '';
+  var posSelect = document.forms[0].elements['position'],
+      posValue = posSelect.options[posSelect.selectedIndex].value; 
+  return posValue;
 }
 
 // Function to map stats from form to playerStats array
